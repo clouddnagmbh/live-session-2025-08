@@ -7,7 +7,8 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^9",
-    "express": "^4"
+    "express": "^4",
+    "@cap-js/hana": "^2"
   },
   "engines": {
     "node": ">=20"
@@ -22,5 +23,12 @@
   },
   "sapux": [
     "app/products"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": "hana"
+      }
+    }
+  }
 }
